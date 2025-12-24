@@ -1,0 +1,65 @@
+:root{
+  --card:#121a33; --text:#e9edff; --muted:#aab2d5;
+  --primary:#5b7cfa; --border:#25305a;
+}
+*{box-sizing:border-box;}
+body{
+  margin:0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans JP", sans-serif;
+  background: linear-gradient(180deg, #0b1020, #070b16);
+  color:var(--text);
+}
+.container{max-width:720px; margin:0 auto; padding:24px;}
+.header{margin: 8px 0 18px;}
+.sub{color:var(--muted); margin-top:6px;}
+.card{
+  background: rgba(18,26,51,0.9);
+  border: 1px solid var(--border);
+  border-radius:16px;
+  padding:18px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.35);
+}
+.hidden{display:none;}
+.btn{
+  width:100%; padding:12px 14px; border-radius:12px;
+  border: 1px solid var(--border);
+  background:#0f1730; color:var(--text);
+  cursor:pointer; font-size:16px;
+}
+.btn:hover{filter:brightness(1.08);}
+.btn.primary{background: var(--primary); border-color: transparent; font-weight:700;}
+.btn.ghost{background: transparent;}
+.choices{display:grid; gap:12px; margin-top:14px;}
+.qtext{margin: 10px 0 8px; line-height:1.5; font-size:20px;}
+.footer{display:flex; gap:10px; margin-top:14px;}
+.footer .btn{width:auto; flex:1;}
+.progress{
+  height:10px; background:#0c132a;
+  border:1px solid var(--border);
+  border-radius:999px; overflow:hidden;
+}
+.progress-bar{height:100%; width:0%; background: var(--primary); transition: width .25s ease;}
+.qmeta{margin-top:10px; color:var(--muted);}
+.result{margin-top:10px; display:grid; gap:10px;}
+.badge{
+  display:inline-block; padding:8px 10px;
+  border-radius:999px; background:#0f1730;
+  border:1px solid var(--border);
+  width: fit-content;
+}
+.rimg{
+  width: 100%;
+  max-height: 260px;
+  object-fit: contain;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  background:#0f1730;
+}
+.rtitle{font-size:18px; font-weight:700; margin:0;}
+.rdesc{color:var(--muted); margin:0; line-height:1.6;}
+.details{margin-top:10px;}
+.scores{
+  background:#0f1730; border:1px solid var(--border);
+  border-radius:12px; padding:12px; overflow:auto;
+}
+.note{margin-top:14px; color:var(--muted);}
