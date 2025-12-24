@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>性格診断（16問）</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container">
+    <header class="header">
+      <h1>性格診断</h1>
+      <p class="sub">16問に答えると、最後にあなたのタイプが発表されます。</p>
+    </header>
+
+    <section id="screen-start" class="card">
+      <p>直感で答えてOK。途中でタイプは表示されません。</p>
+      <button id="btn-start" class="btn primary">診断を始める</button>
+    </section>
+
+    <section id="screen-quiz" class="card hidden" aria-live="polite">
+      <div class="progress">
+        <div id="progress-bar" class="progress-bar"></div>
+      </div>
+
+      <div class="qmeta">
+        <span id="qnum"></span>
+      </div>
+
+      <h2 id="qtext" class="qtext"></h2>
+
+      <div class="choices">
+        <button id="choice-a" class="btn choice"></button>
+        <button id="choice-b" class="btn choice"></button>
+      </div>
+
+      <div class="footer">
+        <button id="btn-back" class="btn ghost">1つ戻る</button>
+        <button id="btn-restart" class="btn ghost">最初から</button>
+      </div>
+    </section>
+
+    <section id="screen-result" class="card hidden">
+      <h2>診断結果</h2>
+
+      <div class="result">
+        <div class="badge" id="rtype"></div>
+        <img id="rimg" class="rimg" alt="診断結果の画像" loading="lazy" />
+        <p class="rtitle" id="rtitle"></p>
+        <p class="rdesc" id="rdesc"></p>
+      </div>
+
+      <details class="details">
+        <summary>スコアを見る</summary>
+        <pre id="scores" class="scores"></pre>
+      </details>
+
+      <button id="btn-share" class="btn primary">結果をコピー</button>
+      <button id="btn-again" class="btn">もう一回</button>
+    </section>
+
+    <footer class="note">
+      <small>※これは娯楽目的の簡易診断です。</small>
+    </footer>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
